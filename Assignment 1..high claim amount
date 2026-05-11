@@ -1,0 +1,27 @@
+class Main {
+    public static void main(String[] args) {
+
+        String claim_id = "CID101";
+        String customer_name = "Hema";
+        String policy_type = "Health";
+        int amount = 15000;
+        String status = "Approved";
+
+        System.out.println("Claim ID: " + claim_id);
+        System.out.println("Customer Name: " + customer_name);
+        System.out.println("Policy Type: " + policy_type);
+        System.out.println("Amount: " + amount);
+        System.out.println("Status: " + status);
+
+        if(status.equals("Approved")) {
+            System.out.println("Claim Approved");
+        }
+        else {
+            System.out.println("Claim Rejected");
+        }
+
+        if(amount > 10000) {
+            System.out.println("High claim amount verified");
+        }
+    }
+}
