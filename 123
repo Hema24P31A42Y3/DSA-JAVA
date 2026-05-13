@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String data = "POL101,Health,Active";
+
+        String arr[] = data.split(",");
+
+        String policyId = arr[0];
+        String policyType = arr[1];
+        String status = arr[2];
+
+        System.out.println("Policy ID: " + policyId);
+        System.out.println("Policy Type: " + policyType);
+        System.out.println("Status: " + status);
+
+        if(status.equals("Active")) {
+            System.out.println("Policy is Active");
+        }
+
+        if(policyId.startsWith("POL")) {
+            System.out.println("Valid Policy ID");
+        }
+        else {
+            System.out.println("Invalid Policy ID");
+        }
+    }
+}
