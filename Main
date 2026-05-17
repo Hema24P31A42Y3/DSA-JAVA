@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Transaction ID: ");
+        String transactionId = sc.nextLine();
+
+        System.out.print("Enter Transaction Type: ");
+        String transactionType = sc.nextLine();
+
+        System.out.print("Enter Amount: ");
+        int amount = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Enter Status: ");
+        String status = sc.nextLine();
+
+        if(transactionType.equalsIgnoreCase("UPI")) {
+            System.out.println("Transaction Type: UPI");
+        }
+        else if(transactionType.equalsIgnoreCase("ATM")) {
+            System.out.println("Transaction Type: ATM");
+        }
+        else if(transactionType.equalsIgnoreCase("NET")) {
+            System.out.println("Transaction Type: NET");
+        }
+
+        if(amount > 5000) {
+            System.out.println("Medium Value Transaction");
+        }
+
+        if(!status.equalsIgnoreCase("success")) {
+            System.out.println("Transaction Failed");
+        }
+    }
+}
