@@ -1,0 +1,15 @@
+public class recursion {
+	static double balance(int months,double balance) 
+	{
+		if(months==0){
+			return balance;
+		}
+		balance=balance+(balance*0.10);
+		balance=balance-2000;
+		return balance(months-1,balance);
+	}
+	public static void main(String args[]) {
+		double result = balance (3,10000);
+		System.out.println("balance="+result);
+	}
+}
